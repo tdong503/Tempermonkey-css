@@ -1,0 +1,34 @@
+.toggle-switch {
+  position: relative;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.switch-label:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s;
+}
+
+.switch-input:checked + .switch-label:before {
+  transform: translateX(30px);
+}
